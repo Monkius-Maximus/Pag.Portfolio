@@ -3,107 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <style>
-    /* Reset básico */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Arial', sans-serif; line-height: 1.6; background: #f4f4f4; color: #333; }
-    a { text-decoration: none; color: #333; }
-    img { max-width: 100%; display: block; }
-
-    /* Container geral */
-    .container { width: 90%; max-width: 1200px; margin: auto; padding: 2rem 0; }
-
-    /* Header */
-    header { background: #fff; padding: 1rem 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 2rem; }
-    nav ul { display: flex; justify-content: center; list-style: none; }
-    nav li { margin: 0 1rem; }
-    nav a:hover { color: #007BFF; }
-
-    /* Seções */
-    section { background: #fff; padding: 2rem; margin-bottom: 2rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-
-    /* Sobre mim */
-    #sobre h2 { margin-bottom: 1rem; }
-    #sobre p { max-width: 800px; margin-bottom: 1rem; }
-    #sobre img { border-radius: 50%; width: 150px; margin-bottom: 1rem; }
-
-    /* Projetos */
-    #projetos h2 { margin-bottom: 1rem; }
-    .projeto-lista { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .projeto { background: #fafafa; padding: 1rem; border-radius: 8px; }
-    .projeto h3 { margin-bottom: 0.5rem; }
-    .projeto a { color: #007BFF; }
-
-    /* Contatos */
-    #contatos h2 { margin-bottom: 1rem; }
-    .contatos-lista { display: flex; justify-content: center; gap: 2rem; }
-    .contatos-lista a { font-size: 1.5rem; }
-
-    /* Footer */
-    footer { text-align: center; padding: 1rem 0; color: #666; }
-
-    /* Responsividade */
-    @media (max-width: 600px) {
-      nav ul { flex-direction: column; }
-      nav li { margin: 0.5rem 0; }
-    }
-  </style>
-</head>
+  <title>Portfolio - Sobre Mim</title> <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <ul>
-          <li><a href="#sobre">Sobre mim</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contatos">Contatos</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <!-- Sobre mim -->
-    <section id="sobre">
-      <h2>Sobre mim</h2>
-      <img src="my_profile_photo.png" alt="Foto de perfil">
-      <p>Olá! Eu me chamo Diogo Rodrigues, sou um estudante de Sistemas de Informações pela UFPE e nos ultimos meses estou focando em desenvolvimento para a web, principalmente com HTML, CSS e JavaScript., Acredito que são habilidades essencial para quem quer se tornar um programador FullStack.</p>
-      <p>Comecei minha jornada em 2023 e desde então venho aprendendo e aplicando conhecimentos em projetos diversos, sempre focado em soluções criativas.</p>
-      <p>Gosto de explorar novas tecnologias e compartilhar meu aprendizado através de conversas com meus amigos e claro por repositórios no GitHub.</p>
-    </section>
+  <input type="checkbox" id="theme-switch" hidden>
+  <label for="theme-switch" class="theme-toggle-label" aria-label="Alternar tema"></label>
 
-    <!-- Projetos -->
-    <section id="projetos">
-      <h2>Projetos</h2>
-      <div class="projeto-lista">
-        <div class="projeto">
-          <h3>Projeto 1</h3>
-          <p>Descrição breve do projeto, conceitos aplicados e tecnologias usadas: HTML, CSS, JavaScript.</p>
-          <a href="https://github.com/seu-usuario/projeto1" target="_blank">Ver no GitHub</a>
-        </div>
-        <div class="projeto">
-          <h3>Projeto 2</h3>
-          <p>Descrição breve do projeto, conceitos aplicados e tecnologias usadas: React, API REST, CSS Grid.</p>
-          <a href="https://github.com/seu-usuario/projeto2" target="_blank">Ver no GitHub</a>
-        </div>
-        <!-- Adicione mais projetos conforme necessário -->
+  <div class="page-content-wrapper">
+    <header>
+      <div class="container">
+        <nav>
+          <ul class="nav-bar">
+            <li><a href="./index.html">Sobre mim</a></li>
+            <li><a href="./projetos.html">Projetos</a></li>
+            <li><a href="./contatos.html">Contatos</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- Contatos -->
-    <section id="contatos">
-      <h2>Contatos</h2>
-      <div class="contatos-lista">
-        <a href="https://linkedin.com/in/seu-perfil" target="_blank">LinkedIn</a>
-        <a href="https://github.com/seu-usuario" target="_blank">GitHub</a>
-        <a href="mailto:seu-email@example.com">Email</a>
-      </div>
-    </section>
-  </main>
+    <main class="container">
+      <section id="sobre">
+        <h2>Sobre mim</h2>
+        <img src="./assets/my_profile_photo.png" alt="Foto de perfil" class="profile-photo">
+        <p>Olá! Eu me chamo Diogo Rodrigues, sou uma pessoa bastante curiosa e estou sempre procurando por algum passa tempo ou desafio novo, e atualmente estou focando em desenvolvimento para a web, principalmente com HTML, CSS e JavaScript., Acredito que são habilidades essencial para quem quer se tornar um programador FullStack.</p>
+        <p>Comecei minha jornada com programação em 2023 e desde então venho aprendendo e aplicando conhecimentos em projetos diversos, sempre focado em soluções criativas.</p>
+        <p>Gosto de explorar novas tecnologias e compartilhar meu aprendizado através de conversas com meus amigos e claro por repositórios no GitHub, mas admito que já faz um tempo que eu não atualizo meus perfis das redes sociais.</p>
+        <h2>Formação</h2>
+            <p>Atualmente sou estudante do curso de Sistemas de Informação pela Ufpe e acabo de concluir meu 3° Período, porém já conclui o Curso Técnico Integrado de Edificações pelo IFPE no período de 2024.2!</p>
+        <h2>Cursos</h2>
+            <p>Já conclui alguns cursos durante os recessos dos períodos que passaram, alguns que eu considero interessante estão presentes no "freecodecamp":</p>
+            <p>Responsive Web Design;
+              <p>JavaScript Algorithms and Data Structures;
+              <p>College Algebra with Python;
+              <p></p>
+              <h3>Tenho Experiencias com as seguintes habilidades;</h3>
+              <p>HTML5, CSS3, JavaScript, Python, R, Git e GitHub, Figma, Canva e Notion</p>
+              <p>E claro, estou sempre buscando aprender mais e mais, e possuo certas experiencias do ramo de edificações e o pacote office, mas isso fica para depois!!!</p>
+      </section>
 
-  <footer>
-    &copy; 2025 Diogo da Silva Rodrigues. Todos os direitos reservados.
-  </footer>
-</body>
+      </main>
+
+    <footer>
+        <div>
+             <a href="https://github.com/Monkius-Maximus" target="_blank">
+                 <img src="./assets/github_icon.svg" alt="github icon">
+                 Github
+             </a>
+         </div>
+         <div>
+             <a href="https://www.linkedin.com/in/diogo-da-silva-rodrigues-949220327/" target="_blank"> 
+              <img src="./assets/LinkedIn_icon.svg" alt="linkedin icon">
+                 Linkedin
+             </a>
+         </div>
+          <div>
+             <a href="https://instagram.com/diogorodrigues.py" target="_blank"> 
+              <img src="./assets/instagram_icon.svg" alt="instagram icon">
+                 Instagram
+             </a>
+         </div>
+    </footer>
+
+  </div> </body>
 </html>
